@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    image: tarea_daw-backend 
+    container_name: tarea_daw-backend-1
+    ports:
+      - "8080:80"
+    networks:
+      - tarea_daw_network
+
+  frontend:
+    image: tarea_daw-frontend
+    container_name: tarea_daw-frontend-1
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - tarea_daw_network
+
+networks:
+  tarea_daw_network:
+    driver: bridge
