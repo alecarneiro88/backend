@@ -11,7 +11,7 @@ on:
 jobs:
   run_tests_and_lint:
     runs-on: ubuntu-latest
-     env:
+    env:
       DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }} 
       DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
     steps:
