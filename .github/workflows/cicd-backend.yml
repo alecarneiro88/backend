@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests with Pytest
         run: |
-          pytest backend/tests
+          pytest tests
 
       - name: Run Lint with Ruff
         run: |
@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${GITHUB_REPOSITORY}/backend:latest
+          docker build -t ${GITHUB_REPOSITORY}/backend:latest ./backend
 
       - name: Push Docker image to DockerHub
         run: |
