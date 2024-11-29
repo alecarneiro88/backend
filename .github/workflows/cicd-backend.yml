@@ -34,7 +34,7 @@ jobs:
           ruff backend/
 
   build_and_push_dockerhub_image:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
