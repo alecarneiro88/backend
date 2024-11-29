@@ -52,11 +52,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-           docker build -t ${GITHUB_REPOSITORY}/backend:latest tarea_daw/backend
+           docker build -t ${{ vars.DOCKER_USERNAME }}/backend:latest tarea_daw/backend
 
       - name: Push Docker image to DockerHub
         run: |
-          docker push ${GITHUB_REPOSITORY}/backend:latest
+          docker push ${{ vars.DOCKER_USERNAME }}/backend:latest
 
   build_and_push_github_actions_image:
     runs-on: ubuntu-latest
