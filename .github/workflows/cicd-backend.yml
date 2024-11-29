@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Lint with Ruff
         run: |
-          ruff tarea_daw/backend/
+          ruff tarea_daw/backend
 
   build_and_push_dockerhub_image:
     runs-on: ubuntu-latest
