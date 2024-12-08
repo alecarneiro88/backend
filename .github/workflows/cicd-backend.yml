@@ -76,7 +76,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
 
-      - name: Build Docker image for GitHub Actions
+      - name: Build Docker  image for GitHub Actions
         run: |
           docker build -t ghcr.io/${GITHUB_REPOSITORY}/backend:latest tarea_daw/backend
 
